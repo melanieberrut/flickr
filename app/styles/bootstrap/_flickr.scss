@@ -1,0 +1,21 @@
+.default-border {
+	border: 2px solid $gray-base;
+}
+
+.thumb-holder {
+	width: 100%;
+	max-width: 150px;
+	max-height: 150px;
+	overflow: hidden;
+	display: block;
+	img {
+		display: block;
+	}
+}
+
+.container-fluid {
+	& > .wrapper {
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+}

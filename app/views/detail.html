@@ -1,0 +1,33 @@
+<div data-ng-show="dataFetch == true" data-ng-controller="detailController">
+
+	<a href="#/listing" class="btn btn-default arrow-left pull-right">back</a>
+
+	<h2><a href="{{itemSelected.link}}">{{itemSelected.title}}</a></h2>
+
+	<ul class="list-inline">
+		<li>
+			<a href="https://www.flickr.com/photos/{{itemSelected.author_id}}/">Photo author</a>
+		</li>
+		<li>|</li>
+		<li>
+			<span>Published: {{itemSelected.published | date:'d'}}th {{itemSelected.published | date:'MMM'}} {{itemSelected.published | date:'yyyy'}} at {{itemSelected.published | date:'H'}}:{{itemSelected.published | date:'mm'}}</span>
+		</li>
+	</ul>
+	<div class="row">
+		<div class="col-xs-3 col-md-3">
+			<img class="img-responsive" data-ng-src="{{itemSelected.media.m}}" alt="{{itemSelected.title}}">
+		</div>
+		<div class="col-xs-9 col-md-9">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nesciunt ipsam autem reiciendis iusto, doloribus sequi, delectus amet neque quis similique alias eaque molestiae cupiditate fugit eligendi cumque, velit eos.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque impedit, ex atque libero, at, dignissimos sapiente consectetur voluptas alias obcaecati tenetur incidunt doloribus, laudantium aperiam eligendi! Cum magni, esse alias?</p>
+			<ul class="list-inline">
+				<li>Tags: </li>
+				<li data-ng-repeat="tag in tags">
+					<a href="https://www.flickr.com/photos/tags/{{tag}}">{{tag}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<p data-ng-show="dataFetch == false">Sorry for the inconvenience, but we can't seem to fetch the data. Please try later...</p>

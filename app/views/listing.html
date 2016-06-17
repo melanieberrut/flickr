@@ -1,0 +1,43 @@
+<div data-ng-controller="listingController">
+
+	<ul data-ng-show="dataFetch == true" class="list-unstyled row panel-app">
+
+		<li class="clearfix animate default-border " data-ng-repeat="item in items">
+
+			<div class="row">
+
+				<div class="col-xs-3 col-sm-3 col-md-2">
+					<a class="thumb-holder" href="#/detail/{{items.indexOf(item)}}">
+						<img  data-ng-src="{{item.media.m}}" alt="">
+					</a>
+				</div>
+
+				<div class="col-xs-9 col-sm-9 col-md-10 no-pad-l">
+
+					<h2 class="trunc"><a href="#/detail/{{items.indexOf(item)}}">{{item.title}}</a></h2>
+
+					<div class="row">
+						<p class="col-xs-12 col-md-4 col-md-push-4">
+							Published: {{item.published | date:'d'}}th {{item.published | date:'MMM'}} {{item.published | date:'yyyy'}} at {{item.published | date:'H'}}:{{item.published | date:'mm'}}
+						</p>
+						<p class="col-xs-6 col-md-4 col-md-pull-4">
+							<a href="https://www.flickr.com/photos/{{item.author_id}}/">Post author</a>
+						</p>
+						<p class="col-xs-6 col-md-4 col-sm-4">
+							<a href="{{item.link}}">View on Flickr</a>
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>
+
+	</ul>
+
+	<p data-ng-show="dataFetch == false">
+		Sorry for the inconvenience, but we can't seem to fetch the data. Please try later...
+	</p>
+</div>

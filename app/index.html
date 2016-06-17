@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Angular test">
+<meta name="viewport" content="width=device-width">
+
+<title>Melanie | Flick Test</title>
+
+<!-- build:css styles/bootstrap.min.css -->
+<link rel="stylesheet" href="styles/bootstrap.css">
+<!-- endbuild -->
+
+</head>
+
+<body data-ng-app="potato">
+
+<div class="container-fluid">
+
+
+	<div class="wrapper">
+		
+		<h1>Flickr Public Feed</h1>
+
+		<div data-ng-view=""></div>
+
+
+	</div>
+	
+</div>
+
+
+<!-- build:js({.tmp,app}) js/app.min.js -->
+<script type="text/javascript" src="js/vendor/angular.js"></script>
+<script type="text/javascript" src="js/vendor/angular-route.js"></script>
+<script type="text/javascript" src="js/vendor/angular-sanitize.js"></script>
+<script type="text/javascript" src="js/vendor/angular-resource.js"></script>
+<script type="text/javascript" src="js/vendor/angular-animate.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/listingController.js"></script>
+<script type="text/javascript" src="js/detailController.js"></script>
+<!-- endbuild -->
+
+</body>
+
+</html>
